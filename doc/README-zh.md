@@ -31,6 +31,10 @@ GHRepoDeleteHelper 是一个适用于 Tampermonkey 的脚本，简化了在 GitH
 4. `Delete this repository` 按钮上方会自动多出一个 `🤖 Auto Fill` 按钮。
 5. 点击 `🤖 Auto Fill` 按钮，输入框会自动填写并且激活 `Delete this repository`
 
+## 效果预览
+
+![preview](../assets/preview.gif)
+
 ## 许可证
 
 此项目根据 MIT 许可的条款进行许可

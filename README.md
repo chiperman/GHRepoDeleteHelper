@@ -33,6 +33,10 @@ However, it is very annoying to copy and paste every time I decide to delete a r
 4. Above the `Delete this repository` button, a `🤖 Auto Fill` button will automatically appear.
 5. Click the `🤖 Auto Fill button` , and the input box will be filled automatically, activating the `Delete this repository button`.
 
+## Preview
+
+![preview](/assets/preview.gif)
+
 ## License
 
 This project is licensed under the terms of the MIT License.
