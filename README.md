@@ -5,6 +5,10 @@
 [<a href="doc/README-zh.md">中文</a>]
 </p>
 
+## Star This Project 🌟
+
+If you find GHRepoDeleteHelper helpful, please consider giving it a star! ⭐️
+
 ## Description
 
 GHRepoDeleteHelper is a Tampermonkey script that simplifies the process of deleting repositories on GitHub.

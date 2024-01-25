@@ -5,6 +5,9 @@
 [中文]
 </p>
 
+## 点赞 🌟
+如果你觉得 GHRepoDeleteHelper 对你有帮助，请点一个 Star！⭐️
+
 ## 描述
 
 GHRepoDeleteHelper 是一个适用于 Tampermonkey 的脚本，简化了在 GitHub 上删库的流程。

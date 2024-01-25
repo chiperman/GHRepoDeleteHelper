@@ -2,7 +2,7 @@
 // @name         Auto Fill Repository Name when Deletion Confirmation
 // @name:zh-CN   自动填写 GitHub 仓库名简化删除操作
 // @namespace    https://github.com/chiperman/GHRepoDeleteHelper
-// @version      1.1
+// @version      1.2
 // @description  Add a button above the "Delete this repository" button and auto-fill the repository name when deleting a repository on GitHub.
 // @description:zh-CN 在“删除此存储库”按钮上方添加一个按钮，并在 GitHub 上删除存储库时自动填写存储库名称。
 // @author       chiperman
@@ -18,36 +18,6 @@
   'use strict';
 
   let observer;
-
-  const createAutoInputButton = () => {
-    const button = document.createElement('span');
-    button.innerText = '🤖 Auto Fill';
-    button.id = 'auto-input-btn';
-    button.className =
-      'js-repo-delete-proceed-button Button--danger Button--medium Button Button--fullWidth';
-    button.style.display = 'flex';
-    button.style.justifyContent = 'center';
-    button.style.alignItems = 'center';
-    button.style.marginBottom = '8px';
-    return button;
-  };
-
-  const addButtonToContainer = (autoInputBtn, targetButton) => {
-    const buttonContainer = targetButton.parentElement;
-    buttonContainer.insertBefore(autoInputBtn, targetButton);
-  };
-
-  // Simulate manually typing each character of the repository name into the input block
-  const simulateInput = (inputBlock, repositoryName) => {
-    inputBlock.focus();
-    for (let i = 0; i < repositoryName.length; i++) {
-      inputBlock.value += repositoryName[i];
-
-      // Trigger the input event
-      const inputEvent = new Event('input');
-      inputBlock.dispatchEvent(inputEvent);
-    }
-  };
 
   const checkURL = () => {
     const currentURL = window.location.href;
@@ -80,11 +50,37 @@
     }
   };
 
+  const createAutoInputButton = () => {
+    const button = document.createElement('span');
+    button.innerText = '🤖 Auto Fill';
+    button.id = 'auto-input-btn';
+    button.className =
+      'js-repo-delete-proceed-button Button--danger Button--medium Button Button--fullWidth';
+    button.style.display = 'flex';
+    button.style.justifyContent = 'center';
+    button.style.alignItems = 'center';
+    button.style.marginBottom = '8px';
+    return button;
+  };
+
+  const addButtonToContainer = (autoInputBtn, targetButton) => {
+    const buttonContainer = targetButton.parentElement;
+    buttonContainer.insertBefore(autoInputBtn, targetButton);
+  };
+
   const autoInputFunction = () => {
     const repositoryElement = document.querySelector('.text-bold.f3.mt-2');
     const repositoryName = repositoryElement.textContent.trim();
     const inputBlock = document.getElementById('verification_field');
     simulateInput(inputBlock, repositoryName);
+  };
+
+  // Simulate manually typing each character of the repository name into the input block
+  const simulateInput = (inputBlock, repositoryName) => {
+    inputBlock.focus();
+    inputBlock.value = repositoryName;
+    const inputEvent = new Event('input');
+    inputBlock.dispatchEvent(inputEvent);
   };
 
   checkURL();
