@@ -2,7 +2,7 @@
 // @name         Auto Fill Repository Name when Deletion Confirmation
 // @name:zh-CN   自动填写 GitHub 仓库名简化删除操作
 // @namespace    https://github.com/chiperman/GHRepoDeleteHelper
-// @version      1.2
+// @version      1.2.1
 // @description  Add a button above the "Delete this repository" button and auto-fill the repository name when deleting a repository on GitHub.
 // @description:zh-CN 在“删除此存储库”按钮上方添加一个按钮，并在 GitHub 上删除存储库时自动填写存储库名称。
 // @author       chiperman
@@ -42,7 +42,7 @@
     const buttonElement = document.getElementById('repo-delete-proceed-button');
     const buttonLabel = buttonElement.textContent.trim();
 
-    if (buttonLabel === 'Delete this repository') {
+    if (buttonLabel === 'Delete this repository' || buttonLabel === '删除仓库') {
       const autoInputBtn = createAutoInputButton();
       addButtonToContainer(autoInputBtn, buttonElement);
       autoInputBtn.addEventListener('click', autoInputFunction);
