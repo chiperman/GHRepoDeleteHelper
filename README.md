@@ -17,8 +17,6 @@ It adds a `🤖 Auto Fill` button above the `Delete this repository` button. Cli
 
 The reason for not directly activating the `Delete this repository` button is because I believe this operation is indeed very dangerous. Therefore, think twice before you go, and GitHub does this probably for the same reason.
 
-However, every time I am sure I want to delete a repository, it is cumbersome to copy and paste. Hence, I created this script to save time, hoping it can also be helpful for you.
-
 However, it is very annoying to copy and paste every time I decide to delete a repository. Therefore, I created this script to save time, and I hope it can also be helpful for you.
 
 ## Installation
